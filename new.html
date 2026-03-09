@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Tinkercad: 7 живых экспериментов для начинающих</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            background: #f0f4f8;
+            color: #1e2b3c;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            line-height: 1.6;
+        }
+        h1 {
+            background: #1a4d5e;
+            color: white;
+            padding: 30px;
+            border-radius: 20px 50px 20px 50px;
+            box-shadow: 0 10px 0 #0e2f3a;
+            font-weight: 600;
+            border-left: 12px solid #4ecdc4;
+            text-align: center;
+        }
+        h2 {
+            background: #2c5f6e;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 40px 10px 40px 10px;
+            margin-top: 45px;
+            font-weight: 500;
+            border-bottom: 5px solid #4ecdc4;
+            display: inline-block;
+        }
+        h3 {
+            color: #1a4d5e;
+            font-weight: 600;
+            border-left: 8px solid #4ecdc4;
+            padding-left: 20px;
+            margin: 30px 0 20px;
+            font-size: 1.4em;
+        }
+        .exp {
+            background: white;
+            border-radius: 30px 10px 30px 10px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border: 2px solid #b7e4e0;
+        }
+        .scheme-box {
+            background: #e0f2f1;
+            border: 4px solid #4ecdc4;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #1a4d5e;
+            border-left: 12px solid #00897b;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .code-block {
+            background: #1e2a3a;
+            color: #f0f9ff;
+            padding: 25px;
+            border-radius: 20px;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 25px 0;
+            border-left: 10px solid #4ecdc4;
+        }
+        .fact {
+            background: #d0ece9;
+            border-left: 10px solid #00897b;
+            border-radius: 20px;
+            padding: 20px 25px;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+        .warning {
+            background: #ffe8d9;
+            border-left: 10px solid #e76f51;
+            border-radius: 20px;
+            padding: 18px 25px;
+        }
+        .pin-reference {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            background: #1a4d5e;
+            color: white;
+            padding: 30px;
+            border-radius: 30px;
+            margin: 30px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        td, th {
+            border: 2px solid #b7e4e0;
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background: #00897b;
+            color: white;
+            font-size: 1.1em;
+        }
+        .tinkercad-button {
+            background: #4ecdc4;
+            color: #1a4d5e;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin: 10px 0;
+            border: 2px solid #00897b;
+            transition: 0.2s;
+        }
+        .tinkercad-button:hover {
+            background: #00897b;
+            color: white;
+        }
+        .component-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .component-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 2px solid #4ecdc4;
+            flex: 1 1 150px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>⚡ TINKERCAD CIRCUITS · 7 ЖИВЫХ ЭКСПЕРИМЕНТОВ ДЛЯ НАЧИНАЮЩИХ</h1>
+
+<p style="font-size: 1.4em; background: white; padding: 25px; border-radius: 30px; border-left: 12px solid #4ecdc4;">
+    🎮 <strong>Никакого железа!</strong> Всё работает в браузере. Tinkercad Circuits — это волшебная песочница, где можно собирать схемы, писать код и сразу видеть результат. Даже если вы никогда не держали паяльник — здесь вы инженер!
+</p>
+
+<!-- ============== КАК НАЧАТЬ ============== -->
+<h2>🚀 КАК РАБОТАТЬ В TINKERCAD</h2>
+<div class="exp">
+    <div class="component-grid">
+        <div class="component-card">1️⃣ Зайдите на <a href="https://www.tinkercad.com" target="_blank">tinkercad.com</a></div>
+        <div class="component-card">2️⃣ Нажмите "Создать цепь" (New Circuit)</div>
+        <div class="component-card">3️⃣ Тащите компоненты справа</div>
+        <div class="component-card">4️⃣ Соединяйте провода</div>
+        <div class="component-card">5️⃣ Нажмите "Код" → вставьте скетч</div>
+        <div class="component-card">6️⃣ "Запустить симуляцию" — готово!</div>
+    </div>
+    
+    <div class="scheme-box">
+        🖼️ [ЗАГЛУШКА 0] Скриншот интерфейса Tinkercad: панель компонентов слева, рабочая область по центру, кнопка "Код" и "Запустить симуляцию"
+    </div>
+</div>
+
+<!-- ============== СПИСОК КОМПОНЕНТОВ ============== -->
+<h2>🧰 ЧТО НАМ ПОНАДОБИТСЯ (ВСЁ ЭТО ЕСТЬ В TINKERCAD)</h2>
+<div class="pin-reference">
+    <div>💡 Светодиоды (красный, жёлтый, зелёный, синий)</div>
+    <div>⚡ Резисторы 220 Ом и 10 кОм</div>
+    <div>🔘 Кнопка (тактовая)</div>
+    <div>🎛️ Потенциометр (переменный резистор)</div>
+    <div>📏 Ультразвуковой датчик HC-SR04</div>
+    <div>🌡️ Датчик температуры TMP36</div>
+    <div>🔊 Пьезозуммер (пищалка)</div>
+    <div>🔄 Сервопривод</div>
+    <div>📟 LCD-дисплей 16x2 I2C (в Tinkercad он есть!)</div>
+    <div>🌈 RGB-светодиод</div>
+    <div>📦 Фоторезистор (датчик освещённости)</div>
+</div>
+
+<!-- ============== ЭКСПЕРИМЕНТ 1 ============== -->
+<h2>🔴 ЭКСПЕРИМЕНТ 1 · МИГАЮЩИЙ СВЕТОДИОД (HELLO, WORLD!)</h2>
+<div class="exp">
+    <h3>⚡ digitalWrite() · delay() · Первая схема</h3>
+    
+    <div class="scheme-box">
+        <strong>🔧 СХЕМА 1:</strong> Светодиод + резистор 220 Ом<br>
+        <p>🟢 Анод (длинная ножка) → пин 13 (через резистор)<br>
+        ⚫ Катод (короткая ножка) → GND</p>
+        <p>💾 Сохраните как: <code>01_blink</code> в Tinkercad</p>
+    </div>
+
+    <div class="code-block">
+// ЭКСПЕРИМЕНТ 1: Мигаем светодиодом
+// Это как "Hello, World!" в программировании
+
+void setup()
+{
+  pinMode(13, OUTPUT);  // Пин 13 будет работать как выход
+}                        // (мы будем подавать напряжение)
+
+void loop()
+{
+  digitalWrite(13, HIGH);   // Включаем светодиод (5 вольт)
+  delay(1000);               // Ждём 1 секунду (1000 мс)
+  
+  digitalWrite(13, LOW);    // Выключаем светодиод (0 вольт)
+  delay(1000);               // Ждём ещё секунду
+  // И всё повторяется снова!
+}
+    </div>
+
+    <div class="fact">
+        🔬 <strong>ФАКТ О КОДЕ:</strong> <code>pinMode(13, OUTPUT);</code> — говорим Ардуино: "Пин 13, ты теперь будешь лампочкой, давай свети!". <code>digitalWrite</code> даёт команду "ВКЛ" (HIGH) или "ВЫКЛ" (LOW). А <code>delay(1000);</code> — это "подожди 1000 миллисекунд", то есть 1 секунду. Всё просто!
+    </div>
+    
+    <div class="fact">
+        🎯 <strong>ПОЧЕМУ РЕЗИСТОР?</strong> Если подключить светодиод напрямую к 5V, он сгорит за секунду (слишком большой ток). Резистор 220 Ом ограничивает ток — светодиод светит ярко, но не умирает. В Tinkercad можно и забыть резистор — симуляция покажет ошибку, но ничего не сгорит 😊
+    </div>
+</div>
+
+<!-- ============== ЭКСПЕРИМЕНТ 2 ============== -->
+<h2>🎛️ ЭКСПЕРИМЕНТ 2 · РЕГУЛИРУЕМ ЯРКОСТЬ (ПОТЕНЦИОМЕТР)</h2>
+<div class="exp">
+    <h3>⚡ analogRead() · map() · analogWrite()</h3>
+    
+    <div class="scheme-box">
+        <strong>🔧 СХЕМА 2:</strong> Потенциометр + светодиод<br>
+        <p>🎛️ Потенциометр: левый контакт → 5V, правый → GND, средний → A0<br>
+        💡 Светодиод через резистор 220 Ом → пин 9 (PWM!)</p>
+        <p>💾 Сохраните как: <code>02_potentiometer</code></p>
+    </div>
+
+    <div class="code-block">
+// ЭКСПЕРИМЕНТ 2: Крутим ручку — меняем яркость
+
+void setup()
+{
+  pinMode(9, OUTPUT);   // Пин 9 умеет менять яркость (PWM)
+  Serial.begin(9600);    // Включаем связь с компьютером
+}
+
+void loop()
+{
+  int potValue = analogRead(A0);  // Читаем напряжение с потенциометра (0..1023)
+  
+  // Преобразуем 0..1023 в 0..255 (диапазон яркости)
+  int brightness = map(potValue, 0, 1023, 0, 255);
+  
+  analogWrite(9, brightness);  // Устанавливаем яркость
+  
+  // Для любопытных: выводим значения в монитор порта
+  Serial.print("Потенциометр: ");
+  Serial.print(potValue);
+  Serial.print(" → Яркость: ");
+  Serial.println(brightness);
+  
+  delay(50);  // Небольшая пауза для стабильности
+}
+    </div>
+
+    <div class="fact">
+        📊 <strong>МАГИЯ MAP:</strong> <code>map()</code> — это пропорция из школьной математики. Если potValue = 512 (половина от 1023), то map выдаст 128 (половина от 255). Формула: значение = (potValue * 255) / 1023. Просто и гениально!
+    </div>
+    
+    <div class="fact">
+        💡 <strong>PWM — ЧТО ЭТО?</strong> Пины с ~ (3,5,6,9,10,11) умеют не просто включать/выключать, а быстро мигать. Так быстро, что глаз видит это как изменение яркости. 0 = всегда выключен, 255 = всегда включен, 127 = полсекунды светит, полсекунды нет.
+    </div>
+</div>
+
+<!-- ============== ЭКСПЕРИМЕНТ 3 ============== -->
+<h2>🔘 ЭКСПЕРИМЕНТ 3 · КНОПКА-ВЫКЛЮЧАТЕЛЬ</h2>
+<div class="exp">
+    <h3>⚡ digitalRead() · Подтягивающий резистор</h3>
+    
+    <div class="scheme-box">
+        <strong>🔧 СХЕМА 3:</strong> Кнопка + светодиод<br>
+        <p>🔘 Кнопка: один контакт → 5V, другой → пин 2 и резистор 10кОм → GND<br>
+        💡 Светодиод через резистор 220 Ом → пин 13</p>
+        <p>💾 Сохраните как: <code>03_button</code></p>
+    </div>
+
+    <div class="code-block">
+// ЭКСПЕРИМЕНТ 3: Кнопка управляет светодиодом
+// Нажал — горит, отпустил — погас
+
+#define BUTTON_PIN 2
+#define LED_PIN 13
+
+void setup()
+{
+  pinMode(LED_PIN, OUTPUT);
+  pinMode(BUTTON_PIN, INPUT);  // Кнопка — это вход
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int buttonState = digitalRead(BUTTON_PIN);  // Читаем кнопку
+  
+  if (buttonState == HIGH) {  // Если нажата (напряжение есть)
+    digitalWrite(LED_PIN, HIGH);
+    Serial.println("Кнопка нажата!");
+  } else {
+    digitalWrite(LED_PIN, LOW);
+  }
+  
+  delay(50);
+}
+    </div>
+
+    <div class="fact">
+        🔌 <strong>ПОДТЯГИВАЮЩИЙ РЕЗИСТОР:</strong> Когда кнопка не нажата, пин 2 "висит в воздухе" — непонятно, что там (наводки, помехи). Резистор 10 кОм подтягивает его к GND, поэтому в покое читаем LOW. При нажатии — 5V побеждает, читаем HIGH. В Tinkercad можно использовать внутренний резистор: <code>pinMode(BUTTON_PIN, INPUT_PULLUP);</code> — тогда код будет наоборот (нажатие = LOW).
+    </div>
+</div>
+
+<!-- ============== ЭКСПЕРИМЕНТ 4 ============== -->
+<h2>📏 ЭКСПЕРИМЕНТ 4 · УЛЬТРАЗВУКОВОЙ ДАЛЬНОМЕР (ПАРКТРОНИК)</h2>
+<div class="exp">
+    <h3>⚡ pulseIn() · HC-SR04 · Сантиметры</h3>
+    
+    <div class="scheme-box">
+        <strong>🔧 СХЕМА 4:</strong> Ультразвуковой датчик + зуммер<br>
+        <p>📏 HC-SR04: VCC→5V, GND→GND, Trig→D9, Echo→D10<br>
+        🔊 Зуммер: +→D8, -→GND</p>
+        <p>💾 Сохраните как: <code>04_ultrasonic</code></p>
+    </div>
+
+    <div class="code-block">
+// ЭКСПЕРИМЕНТ 4: Парктроник — пищит, когда близко
+
+#define TRIG 9
+#define ECHO 10
+#define BUZZER 8
+
+void setup()
+{
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+  pinMode(BUZZER, OUTPUT);
+  Serial.begin(9600);
+  Serial.println("Ультразвуковой парктроник запущен!");
+}
+
+void loop()
+{
+  // Посылаем ультразвуковой импульс
+  digitalWrite(TRIG, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG, LOW);
+  
+  // Измеряем время возвращения эха
+  long duration = pulseIn(ECHO, HIGH);
+  
+  // Вычисляем расстояние (скорость звука 343 м/с)
+  int distance = duration * 0.034 / 2;  // /2 потому что туда и обратно
+  
+  // Ограничиваем до 200 см (дальше не интересно)
+  if (distance > 200) distance = 200;
+  
+  Serial.print("Расстояние: ");
+  Serial.print(distance);
+  Serial.println(" см");
+  
+  // Чем ближе объект, тем чаще пищим
+  if (distance &lt; 50) {
+    int beepDelay = map(distance, 0, 50, 50, 500);
+    tone(BUZZER, 2000, 50);
+    delay(beepDelay);
+  } else {
+    noTone(BUZZER);
+    delay(100);
+  }
+}
+    </div>
+
+    <div class="fact">
+        🦇 <strong>КАК ЭТО РАБОТАЕТ?</strong> Датчик посылает ультразвук (как летучая мышь!) и засекает время возвращения эха. Звук летит со скоростью 343 м/с, или 0.034 см/мкс. Формула: расстояние = время * скорость / 2. Время в микросекундах, делим на 2, потому что звук летит туда и обратно.
+    </div>
+    
+    <div class="fact">
+        🚗 <strong>ГДЕ ИСПОЛЬЗУЕТСЯ?</strong> В автомобильных парктрониках, роботах-пылесосах (чтобы не врезаться), в автоматических дверях. В Tinkercad можно подвигать объект мышкой — расстояние изменится!
+    </div>
+</div>
+
+<!-- ============== ЭКСПЕРИМЕНТ 5 ============== -->
+<h2>🌈 ЭКСПЕРИМЕНТ 5 · RGB-СВЕТОДИОД (МИЛЛИОНЫ ЦВЕТОВ)</h2>
+<div class="exp">
+    <h3>⚡ Три канала · Смешение цветов</h3>
+    
+    <div class="scheme-box">
+        <strong>🔧 СХЕМА 5:</strong> RGB-светодиод + 3 резистора<br>
+        <p>🔴 Красный → D9 через 220Ω<br>
+        🟢 Зелёный → D10 через 220Ω<br>
+        🔵 Синий → D11 через 220Ω<br>
+        ⚫ Общий катод → GND</p>
+        <p>💾 Сохраните как: <code>05_rgb</code></p>
+    </div>
+
+    <div class="code-block">
+// ЭКСПЕРИМЕНТ 5: RGB-светодиод — магия цвета
+// Плавно переливается всеми цветами радуги
+
+#define RED 9
+#define GREEN 10
+#define BLUE 11
+
+void setup()
+{
+  // Ничего не настраиваем — analogWrite не требует pinMode
+}
+
+void loop()
+{
+  // Красный -> Жёлтый (увеличиваем зелёный)
+  for (int i = 0; i &lt;= 255; i++) {
+    analogWrite(RED, 255);
+    analogWrite(GREEN, i);
+    analogWrite(BLUE, 0);
+    delay(5);
+  }
+  
+  // Жёлтый -> Зелёный (уменьшаем красный)
+  for (int i = 255; i >= 0; i--) {
+    analogWrite(RED, i);
+    analogWrite(GREEN, 255);
+    analogWrite(BLUE, 0);
+    delay(5);
+  }
+  
+  // Зелёный -> Бирюзовый (увеличиваем синий)
+  for (int i = 0; i &lt;= 255; i++) {
+    analogWrite(RED, 0);
+    analogWrite(GREEN, 255);
+    analogWrite(BLUE, i);
+    delay(5);
+  }
+  
+  // И так далее... полный цикл радуги
+}
+    </div>
+
+    <div class="fact">
+        🎨 <strong>КАК ПОЛУЧАЮТСЯ ЦВЕТА?</strong> Телевизор, монитор и этот светодиод работают одинаково: смешивают красный, зелёный и синий. Красный + зелёный = жёлтый. Зелёный + синий = бирюзовый. Красный + синий = пурпурный. Все три вместе = белый. Меняя яркость каждого канала, можно получить 256×256×256 = 16 миллионов цветов!
+    </div>
+</div>
+
+<!-- ============== ЭКСПЕРИМЕНТ 6 ============== -->
+<h2>🌡️ ЭКСПЕРИМЕНТ 6 · ЭЛЕКТРОННЫЙ ТЕРМОМЕТР</h2>
+<div class="exp">
+    <h3>⚡ TMP36 · Температура в °C · LCD-дисплей</h3>
+    
+    <div class="scheme-box">
+        <strong>🔧 СХЕМА 6:</strong> TMP36 + LCD 16x2 (I2C)<br>
+        <p>🌡️ TMP36: левый → 5V, правый → GND, средний → A0<br>
+        📟 LCD I2C: VCC→5V, GND→GND, SDA→A4, SCL→A5</p>
+        <p>💾 Сохраните как: <code>06_thermometer</code></p>
+    </div>
+
+    <div class="code-block">
+// ЭКСПЕРИМЕНТ 6: Цифровой термометр на LCD
+// В Tinkercad используется библиотека LiquidCrystal_I2C
+
+#include &lt;LiquidCrystal_I2C.h&gt;
+
+LiquidCrystal_I2C lcd_1(0x27, 16, 2);  // Адрес 0x27, 16 колонок, 2 строки
+
+#define TEMP_PIN A0
+
+void setup()
+{
+  lcd_1.init();          // Запускаем дисплей
+  lcd_1.backlight();      // Включаем подсветку
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("Termometer");
+  delay(2000);
+  lcd_1.clear();
+}
+
+void loop()
+{
+  int sensorValue = analogRead(TEMP_PIN);
+  
+  // TMP36: 10 мВ на °C, 0°C = 500 мВ
+  float voltage = sensorValue * (5.0 / 1023.0);
+  float temperature = (voltage - 0.5) * 100;
+  
+  lcd_1.setCursor(0, 0);
+  lcd_1.print("Temp: ");
+  lcd_1.print(temperature, 1);
+  lcd_1.print(" C   ");  // Пробелы для очистки
+  
+  lcd_1.setCursor(0, 1);
+  if (temperature &lt; 18) {
+    lcd_1.print("❄️ Cold!   ");
+  } else if (temperature > 26) {
+    lcd_1.print("🔥 Hot!    ");
+  } else {
+    lcd_1.print("✅ Comfort ");
+  }
+  
+  delay(500);
+}
+    </div>
+
+    <div class="fact">
+        🌡️ <strong>ФОРМУЛА ТЕМПЕРАТУРЫ:</strong> TMP36 выдаёт 0.5В при 0°C и добавляет по 10 мВ на каждый градус. То есть при 20°C напряжение = 0.5 + 0.01*20 = 0.7В. Формула: T = (напряжение - 0.5) * 100. Гениально просто!
+    </div>
+    
+    <div class="fact">
+        📟 <strong>ПРО LCD В TINKERCAD:</strong> В Tinkercad используется библиотека LiquidCrystal_I2C, а не Adafruit_LiquidCrystal. Адрес по умолчанию — 0x27. Не забудьте вызвать <code>lcd_1.init();</code> и <code>lcd_1.backlight();</code>!
+    </div>
+</div>
+
+<!-- ============== ЭКСПЕРИМЕНТ 7 ============== -->
+<h2>🔄 ЭКСПЕРИМЕНТ 7 · УМНЫЙ СВЕТОФОР (ИТОГОВЫЙ ПРОЕКТ)</h2>
+<div class="exp">
+    <h3>⚡ Собираем всё вместе: кнопка + светодиоды + дальномер</h3>
+    
+    <div class="scheme-box">
+        <strong>🔧 СХЕМА 7:</strong> Светофор с кнопкой для пешеходов<br>
+        <p>🚦 Красный → D13, Жёлтый → D12, Зелёный → D11 (все через резисторы 220 Ом)<br>
+        🔘 Кнопка на D2 (с резистором 10 кОм к GND и проводом к 5V)</p>
+        <p>💾 Сохраните как: <code>07_traffic_light</code></p>
+    </div>
+
+    <div class="code-block">
+// ЭКСПЕРИМЕНТ 7: Пешеходный светофор
+// Обычный режим: зелёный для машин
+// Нажали кнопку → красный для машин, потом зелёный для людей
+
+#define RED 13
+#define YELLOW 12
+#define GREEN 11
+#define BUTTON 2
+
+void setup()
+{
+  pinMode(RED, OUTPUT);
+  pinMode(YELLOW, OUTPUT);
+  pinMode(GREEN, OUTPUT);
+  pinMode(BUTTON, INPUT);
+  Serial.begin(9600);
+  
+  // Начинаем с зелёного для машин
+  digitalWrite(GREEN, HIGH);
+  digitalWrite(YELLOW, LOW);
+  digitalWrite(RED, LOW);
+}
+
+void loop()
+{
+  // Проверяем кнопку (HIGH = нажата, потому что у нас резистор к GND)
+  if (digitalRead(BUTTON) == HIGH) {
+    Serial.println("Кнопка нажата! Переключаем для пешеходов.");
+    
+    // Выключаем зелёный, включаем жёлтый
+    digitalWrite(GREEN, LOW);
+    digitalWrite(YELLOW, HIGH);
+    delay(2000);  // Жёлтый горит 2 секунды
+    
+    // Выключаем жёлтый, включаем красный
+    digitalWrite(YELLOW, LOW);
+    digitalWrite(RED, HIGH);
+    delay(5000);  // Красный горит 5 секунд (пешеходы идут)
+    
+    // Возвращаем зелёный
+    digitalWrite(RED, LOW);
+    digitalWrite(GREEN, HIGH);
+    
+    // Небольшая задержка, чтобы кнопка не сработала снова сразу
+    delay(500);
+  }
+  
+  // Обычный цикл не нужен — светофор просто горит зелёным,
+  // пока не нажмут кнопку
+}
+    </div>
+
+    <div class="fact">
+        🚦 <strong>НАСТОЯЩИЙ СВЕТОФОР:</strong> В реальных светофорах всё сложнее: датчики машин, пешеходные кнопки с подсветкой, синхронизация перекрёстков. Но принцип тот же: состояния (зелёный/жёлтый/красный) и таймеры. В Tinkercad можно добавить второй светофор и синхронизировать их!
+    </div>
+    
+    <div class="fact">
+        🎯 <strong>ИТОГ:</strong> В этом проекте вы использовали digitalWrite для светодиодов, digitalRead для кнопки, delay для таймингов. Это основа любой системы управления!
+    </div>
+</div>
+
+<!-- ============== ТАБЛИЦА КОМПОНЕНТОВ ============== -->
+<h2>📋 ШПАРГАЛКА: КУДА ВСЁ ПОДКЛЮЧАТЬ</h2>
+<div class="exp">
+    <table>
+        <tr><th>Компонент</th><th>Куда подключать</th><th>Важно!</th></tr>
+        <tr><td>💡 Светодиод</td><td>Анод → пин (через 220Ω), катод → GND</td><td>Длинная ножка = +</td></tr>
+        <tr><td>🔘 Кнопка (наш вариант)</td><td>Один контакт → 5V, другой → пин + резистор 10кΩ → GND</td><td>Нажатие = HIGH</td></tr>
+        <tr><td>🎛️ Потенциометр</td><td>Левый → 5V, правый → GND, средний → A0</td><td>Вращаем — меняется напряжение</td></tr>
+        <tr><td>📏 HC-SR04</td><td>VCC→5V, GND→GND, Trig→D9, Echo→D10</td><td>Не перепутать Trig и Echo</td></tr>
+        <tr><td>🌡️ TMP36</td><td>Левый → 5V, правый → GND, средний → A0</td><td>Плоской стороной к себе</td></tr>
+        <tr><td>📟 LCD I2C</td><td>VCC→5V, GND→GND, SDA→A4, SCL→A5</td><td>Адрес 0x27, библиотека LiquidCrystal_I2C</td></tr>
+        <tr><td>🌈 RGB-светодиод</td><td>R→D9, G→D10, B→D11 через 220Ω, катод→GND</td><td>Для общего катода</td></tr>
+        <tr><td>🔊 Зуммер</td><td>+ → D8, - → GND</td><td>Пищит при tone()</td></tr>
+    </table>
+</div>
+
+<!-- ============== ПОЛЕЗНЫЕ ФАКТЫ ДЛЯ НОВИЧКОВ ============== -->
+<h2>🧠 5 ФАКТОВ, КОТОРЫЕ НУЖНО ЗНАТЬ</h2>
+<div class="exp">
+    <div class="fact">1️⃣ <strong>digitalWrite</strong> — это просто выключатель. Либо есть напряжение (HIGH), либо нет (LOW).</div>
+    <div class="fact">2️⃣ <strong>analogRead</strong> возвращает число от 0 до 1023. 0 = 0V, 1023 = 5V. Потому что АЦП 10-битный (2¹⁰ = 1024).</div>
+    <div class="fact">3️⃣ <strong>analogWrite</strong> работает только на пинах с ~ (3,5,6,9,10,11). Это ШИМ — быстрое мигание, глаз видит как яркость.</div>
+    <div class="fact">4️⃣ <strong>delay()</strong> останавливает программу. Пока идёт задержка, Ардуино ничего не делает. Для нескольких задач одновременно используют <code>millis()</code>.</div>
+    <div class="fact">5️⃣ В Tinkercad можно нажимать кнопки, крутить потенциометры и даже двигать объекты перед ультразвуковым датчиком — и всё работает!</div>
+</div>
+
+<!-- ============== БОНУС: НЕОБЫЧНЫЙ ЭКСПЕРИМЕНТ ============== -->
+<h2>🎁 БОНУС: НОЧНИК С ФОТОРЕЗИСТОРОМ</h2>
+<div class="exp">
+    <div class="scheme-box">
+        <strong>🔧 БОНУСНАЯ СХЕМА:</strong> Фоторезистор + светодиод<br>
+        <p>📦 Фоторезистор: один контакт → 5V, другой → A1 + резистор 10кΩ → GND<br>
+        💡 Светодиод через резистор 220 Ом → D9</p>
+        <p>Чем темнее, тем ярче светит светодиод — автоматический ночник!</p>
+    </div>
+
+    <div class="code-block">
+// БОНУС: Автоматический ночник
+// Чем меньше света, тем ярче светодиод
+
+#define LDR_PIN A1
+#define LED_PIN 9
+
+void setup()
+{
+  pinMode(LED_PIN, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int lightLevel = analogRead(LDR_PIN);  // 0 (темно) .. 1023 (светло)
+  
+  // Инвертируем: чем темнее, тем больше яркость
+  int brightness = map(lightLevel, 0, 1023, 255, 0);
+  
+  analogWrite(LED_PIN, brightness);
+  
+  Serial.print("Свет: ");
+  Serial.print(lightLevel);
+  Serial.print(" → Яркость: ");
+  Serial.println(brightness);
+  
+  delay(100);
+}
+    </div>
+
+    <div class="fact">
+        📦 <strong>ФОТОРЕЗИСТОР:</strong> Его сопротивление меняется в зависимости от освещения. Чем светлее, тем меньше сопротивление. Вместе с постоянным резистором 10 кОм они образуют делитель напряжения. Чем темнее, тем выше напряжение на A1.
+    </div>
+</div>
+
+<!-- ============== ЗАКЛЮЧЕНИЕ ============== -->
+<div style="background: linear-gradient(145deg, #1a4d5e, #0e2f3a); color: white; padding: 40px; border-radius: 50px 20px 50px 20px; margin-top: 50px; text-align: center;">
+    <h2 style="background: none; color: #4ecdc4; border: none; display: block; font-size: 2em;">🎉 ТЫ ИНЖЕНЕР!</h2>
+    <p style="font-size: 1.4em;">Ты собрал 7 схем, написал 7 программ и узнал, как работают светодиоды, кнопки, датчики и дисплеи. Всё это — в браузере, без пайки и дыма!</p>
+    <p style="font-size: 1.2em; background: rgba(78,205,196,0.2); padding: 20px; border-radius: 50px;">⬇️ А теперь придумай свой проект: светофор, умный дом, робота — в Tinkercad можно всё!</p>
+</div>
+
+</body>
+</html>
